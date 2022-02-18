@@ -32,6 +32,20 @@ pageClass: routes
 
 <Route author="maple3142" example="/apkpure/versions/jp/jp.co.craftegg.band" path="/apkpure/versions/:region/:pkg" :paramsDesc="['區域代號', 'package name']"/>
 
+## App Center
+
+### Release
+
+<Route author="Rongronggg9" example="/app-center/release/cloudflare/1.1.1.1-windows/beta" path="/app-center/release/:user/:app/:distribution_group" :paramsDesc="['用户', 'App 名称', '分发组']" radar="1" rssbud="1">
+
+::: tip 提示
+
+参数可从 Release 页的 URL 中提取: `https://install.appcenter.ms/users/:user/apps/:app/distribution_groups/:distribution_group`
+
+:::
+
+</Route>
+
 ## App Store/Mac App Store
 
 ### 应用更新
@@ -150,7 +164,7 @@ pageClass: routes
 
 ### 镜像有新 Build
 
-<Route author="HenryQW" example="/dockerhub/build/wangqiru/ttrss" path="/dockerhub/build/:owner/:image/:tag?" :paramsDesc="['镜像作者', '镜像名称', '镜像标签，默认 latest']" radar="1" rssbud="1"/>
+<Route author="HenryQW" example="/dockerhub/build/wangqiru/ttrss" path="/dockerhub/build/:owner/:image/:tag?" :paramsDesc="['镜像作者', '镜像名称', '镜像标签，默认 latest']" radar="1" rssbud="1">
 
 ::: warning 注意
 
@@ -158,12 +172,26 @@ pageClass: routes
 
 :::
 
+</Route>
+
+### 镜像有新 Tag
+
+<Route author="outloudvi" example="/dockerhub/tag/library/mariadb" path="/dockerhub/tag/:owner/:image/:limits?" :paramsDesc="['镜像作者', '镜像名称', 'tag 数量，默认为 10']" radar="1" rssbud="1">
+
+::: warning 注意
+
+官方镜像的 owner 填写 library, 如: <https://rsshub.app/dockerhub/tag/library/mysql>
+
+:::
+
+</Route>
+
 ## Eagle
 
 ### 更新日志
 
 <Route author="tigercubden" example="/eagle/changelog" path="/eagle/changelog/:language?" :paramsDesc="['语言，选项见下表，默认为 `cn`']" radar="1">
-    
+
 语言
 
 | 简体中文 | 繁体中文 | 英文 |
@@ -366,7 +394,7 @@ pageClass: routes
 
 ### 有新路由啦
 
-<Route author="DIYgod" example="/rsshub/routes" path="/rsshub/routes" radar="1" rssbud="1"/>
+<Route author="DIYgod" example="/rsshub/routes" path="/rsshub/routes/:lang?" radar="1" rssbud="1" :paramsDesc="['语言，`en` 为英文路由，其他值或留空则为中文路由，预设为中文路由']"/>
 
 ### 有新赞助商啦
 

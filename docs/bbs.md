@@ -64,6 +64,30 @@ pageClass: routes
 
 </Route>
 
+## 423Down
+
+### 分类
+
+<Route author="Fatpandac" example="/423down/index/all" path="/423down/:category/:type" :paramsDesc="['类型', '分类']" radar="1">
+
+| category | 全部 |
+| :------: | :--: |
+|   index  |  all |
+
+| category | 安卓软件 |
+| :------: | :------: |
+|  android |    apk   |
+
+| category |   原创软件   |  媒体播放  | 网页浏览 | 图形图像 | 聊天软件 | 办公软件 | 上传下载 |  系统辅助  |  系统必备  | 安全软件 | 补丁相关 | 硬件相关 |
+| :------: | :----------: | :--------: | :------: | :------: | :------: | :------: | :------: | :--------: | :--------: | :------: | :------: | :------: |
+| computer | originalsoft | multimedia |  browser |   image  |    im    |   work   |   down   | systemsoft | systemplus | security |   patch  | hardware |
+
+| category | windows 11 | windows 10 | windows 7 | windows xp | windows pe |
+| :------: | :--------: | :--------: | :-------: | :--------: | :--------: |
+|    os    |    win11   |    win10   |    win7   |    winxp   |    winpe   |
+
+</Route>
+
 ## A 岛匿名版
 
 ### 串
@@ -480,11 +504,11 @@ pageClass: routes
 
 ### 分区
 
-<Route author="ma6254" example="/lkong/forum/60" path="/lkong/forum/:id/:digest?" :paramsDesc="['分区 id, 可在分区的URL里找到','默认获取全部主题，任意值则只获取精华主题']"/>
+<Route author="ma6254 nczitzk" example="/lkong/forum/60" path="/lkong/forum/:id/:digest?" :paramsDesc="['分区 id, 可在分区的URL里找到','默认获取全部主题，任意值则只获取精华主题']"/>
 
 ### 帖子
 
-<Route author="ma6254" example="/lkong/thread/2356933" path="/lkong/thread/:id?" :paramsDesc="['帖子 id, 可在帖子的URL里找到']"/>
+<Route author="ma6254 nczitzk" example="/lkong/thread/2356933" path="/lkong/thread/:id?" :paramsDesc="['帖子 id, 可在帖子的URL里找到']"/>
 
 ## 龙腾网
 
@@ -842,6 +866,12 @@ pageClass: routes
 
 </Route>
 
+## 音频应用
+
+### 最新主题
+
+<Route author="zxzhuty" example="/audiobar/latest" path="/audiobar/latest" />
+
 ## 直播吧
 
 ### 子论坛
@@ -869,3 +899,5 @@ pageClass: routes
 | 灵异事件      | 灵异图片     | 民间奇谈     |
 | ------------- | ------------ | ------------ |
 | lingyishijain | lingyitupian | minjianqitan |
+
+</Route>
