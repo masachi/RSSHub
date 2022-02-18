@@ -109,6 +109,40 @@ pageClass: routes
 
 <Route author="TonyRL" example="/gameapps" path="/gameapps"/>
 
+## Gamer Secret
+
+### 最新資訊
+
+<Route author="nczitzk" example="/gamersecret" path="/gamersecret"/>
+
+### 分類
+
+<Route author="nczitzk" example="/gamersecret/pc" path="/gamersecret/:type?/:category?" :paramsDesc="['类型，见下表，默认为 Latest News', '分类，见下表，默认为空']">
+
+| Latest News | PC | Playstation | Nintendo | Xbox | Moblie |
+| ----------- | -- | ----------- | -------- | ---- | ------ |
+| latest-news | pc | playstation | nintendo | xbox | moblie |
+
+或者
+
+| GENERAL          | GENERAL EN         | MOBILE          | MOBILE EN         |
+| ---------------- | ------------------ | --------------- | ----------------- |
+| category/general | category/generalen | category/mobile | category/mobileen |
+
+| NINTENDO          | NINTENDO EN         | PC          | PC EN         |
+| ----------------- | ------------------- | ----------- | ------------- |
+| category/nintendo | category/nintendoen | category/pc | category/pcen |
+
+| PLAYSTATION          | PLAYSTATION EN         | REVIEWS          |
+| -------------------- | ---------------------- | ---------------- |
+| category/playstation | category/playstationen | category/reviews |
+
+| XBOX          | XBOX EN         |
+| ------------- | --------------- |
+| category/xbox | category/xboxen |
+
+</Route>
+
 ## GameRes 游资网
 
 ### 热点推荐
@@ -635,11 +669,11 @@ Example：`https://www.iyingdi.com/tz/people/55547` ，id 是 `55547`
 
 ### 游戏折扣
 
-<Route author="LogicJake" example="/yxdzqb/hot_chinese" path="/yxdzqb/:type" :paramsDesc="['折扣类型']">
+<Route author="LogicJake nczitzk" example="/yxdzqb/popular_cn" path="/yxdzqb/:type" :paramsDesc="['折扣类型']">
 
 | Steam 最新折扣 | Steam 热门游戏折扣 | Steam 热门中文游戏折扣 | Steam 历史低价 | Steam 中文游戏历史低价 |
 | -------------- | ------------------ | ---------------------- | -------------- | ---------------------- |
-| new            | hot                | hot_chinese            | low            | low_chinese            |
+| discount       | popular            | popular_cn             | low            | low_cn                 |
 
 </Route>
 
@@ -731,13 +765,13 @@ Example：`https://www.iyingdi.com/tz/people/55547` ，id 是 `55547`
 
 ### 用户文章
 
-<Route author="ztmzzz" example="/lolapp/article/ee97e19c-4a64-4637-b916-b9ee23744d1f" path="/lolapp/article/:uuid" :paramsDesc="['用户UUID,可在文章html中获取']"/>
+<Route author="ztmzzz" example="/lolapp/article/ee97e19c-4a64-4637-b916-b9ee23744d1f" path="/lolapp/article/:uuid" :paramsDesc="['用户UUID，可在文章html中获取']"/>
 
 ## 最终幻想 14
 
 ### 最终幻想 14 国服
 
-<Route author="Kiotlin" example="/ff14/ff14_zh/news" path="/ff14/ff14_zh/:type" :paramsDesc="['分类名']">
+<Route author="Kiotlin" example="/ff14/zh/news" path="/ff14/zh/:type?" :paramsDesc="['分类名，预设为 `all`']">
 
 | 新闻 | 公告     | 活动   | 广告      | 所有 |
 | ---- | -------- | ------ | --------- | ---- |
@@ -747,14 +781,15 @@ Example：`https://www.iyingdi.com/tz/people/55547` ，id 是 `55547`
 
 ### 最终幻想 14 国际服 （Lodestone）
 
-<Route author="chengyuhui" example="/ff14/ff14_global/na/all" path="/ff14/ff14_global/:lang/:type" :paramsDesc="['地区', '分类名']">
+<Route author="chengyuhui" example="/ff14/global/na/all" path="/ff14/global/:lang/:type?" :paramsDesc="['地区', '分类名，预设为 `all`']">
+
 | 北美 | 欧洲（英语） | 法国 | 德国 | 日本 |
 | ---- | ------------ | ---- | ---- | ---- |
 | na   | eu           | fr   | de   | jp   |
 
-| 话题   | 公告    | 维护        | 更新    | 服务状态 | 开发者博客 |
-| ------ | ------- | ----------- | ------- | -------- | ---------- |
-| topics | notices | maintenance | updates | status   | developers |
+| 所有 | 话题   | 公告    | 维护        | 更新    | 服务状态 | 开发者博客 |
+| ---- | ------ | ------- | ----------- | ------- | -------- | ---------- |
+| all  | topics | notices | maintenance | updates | status   | developers |
 
 </Route>
 
